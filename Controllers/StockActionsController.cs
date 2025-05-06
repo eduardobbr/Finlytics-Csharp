@@ -1,3 +1,9 @@
+using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
+using Finlytics_Csharp.Models; // (ajuste conforme o namespace do seu modelo)
+using Finlytics_Csharp.Data;   // (ajuste conforme onde está seu AppDbContext)
+
+
 [ApiController]
 [Route("api/[controller]")]
 public class StockActionsController : ControllerBase
@@ -9,7 +15,7 @@ public class StockActionsController : ControllerBase
         _context = context;
     }
 
-    
+    // POST: api/StockActions
     [HttpPost]
     public async Task<IActionResult> CreateStockAction([FromBody] StockAction action)
     {
