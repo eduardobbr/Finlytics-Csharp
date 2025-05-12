@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
-using Finlytics_Csharp.Models; // (ajuste conforme o namespace do seu modelo)
-using Finlytics_Csharp.Data;   // (ajuste conforme onde está seu AppDbContext)
+using Finlytics_Csharp.Models; 
+using Finlytics_Csharp.Data;   
 
 
 [ApiController]
@@ -28,7 +28,7 @@ public class StockActionsController : ControllerBase
         return CreatedAtAction(nameof(GetStockActionById), new { id = action.Id }, action);
     }
 
-    
+    // GET: api/StockActions/{id}
     [HttpGet("{id}")]
     public async Task<ActionResult<StockAction>> GetStockActionById(int id)
     {
@@ -38,5 +38,44 @@ public class StockActionsController : ControllerBase
             return NotFound();
 
         return action;
+    }
+
+    // PUT: api/StockActions/{id}
+    [HttpPut("{id}")]
+    public async Task<IActionResult> UpdateStockAction(int id, [FromBody] StockAction updatedAction)
+    {
+        if (id != updatedAction.Id)
+            return BadRequest("ID in the URL does not match the ID in the body.");
+
+        if (!ModelState.IsValid)
+            return BadRequest(ModelState);
+
+        var existingAction = await _context.StockActions.FindAsync(id);
+        if (existingAction == null)
+            return NotFound();
+
+        // Update the properties of the existing entity
+        existingAction.Name = updatedAction.Name;
+        existingAction.Description = updatedAction.Description;
+        existingAction.Quantity = updatedAction.Quantity;
+
+        _context.StockActions.Update(existingAction);
+        await _context.SaveChangesAsync();
+
+        return NoContent();
+    }
+
+    // DELETE: api/StockActions/{id}
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> DeleteStockAction(int id)
+    {
+        var action = await _context.StockActions.FindAsync(id);
+        if (action == null)
+            return NotFound();
+
+        _context.StockActions.Remove(action);
+        await _context.SaveChangesAsync();
+
+        return NoContent();
     }
 }
