@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
-using Finlytics_Csharp.Models; 
-using Finlytics_Csharp.Data;   
+using Finlytics_Csharp.Models;
+using Finlytics_Csharp.Data;
 
 
 [ApiController]
@@ -55,9 +55,19 @@ public class StockActionsController : ControllerBase
             return NotFound();
 
         // Update the properties of the existing entity
-        existingAction.Name = updatedAction.Name;
-        existingAction.Description = updatedAction.Description;
+        existingAction.Ticker = updatedAction.Ticker;
+        existingAction.CompanyName = updatedAction.CompanyName;
+        existingAction.PurchaseDate = updatedAction.PurchaseDate;
+        existingAction.Currency = updatedAction.Currency;
+        existingAction.PurchasePrice = updatedAction.PurchasePrice;
+        existingAction.CurrentPrice = updatedAction.CurrentPrice;
+        existingAction.PurchaseFee = updatedAction.PurchaseFee;
         existingAction.Quantity = updatedAction.Quantity;
+        existingAction.ProbabilityArrow = updatedAction.ProbabilityArrow;
+        existingAction.Upside = updatedAction.Upside;
+        existingAction.Downside = updatedAction.Downside;
+        existingAction.Quality = updatedAction.Quality;
+
 
         _context.StockActions.Update(existingAction);
         await _context.SaveChangesAsync();

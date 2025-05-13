@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/thapcomdev/Downloads/Faculdade/Finlytics-Csharp/Finlytics-Csharp.csproj": {}
+    "/Users/thapcomdev/Downloads/Faculdade/Finlytics-Csharp/backend/Finlytics-Csharp.csproj": {}
   },
   "projects": {
-    "/Users/thapcomdev/Downloads/Faculdade/Finlytics-Csharp/Finlytics-Csharp.csproj": {
+    "/Users/thapcomdev/Downloads/Faculdade/Finlytics-Csharp/backend/Finlytics-Csharp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/thapcomdev/Downloads/Faculdade/Finlytics-Csharp/Finlytics-Csharp.csproj",
+        "projectUniqueName": "/Users/thapcomdev/Downloads/Faculdade/Finlytics-Csharp/backend/Finlytics-Csharp.csproj",
         "projectName": "Finlytics-Csharp",
-        "projectPath": "/Users/thapcomdev/Downloads/Faculdade/Finlytics-Csharp/Finlytics-Csharp.csproj",
+        "projectPath": "/Users/thapcomdev/Downloads/Faculdade/Finlytics-Csharp/backend/Finlytics-Csharp.csproj",
         "packagesPath": "/Users/thapcomdev/.nuget/packages/",
-        "outputPath": "/Users/thapcomdev/Downloads/Faculdade/Finlytics-Csharp/obj/",
+        "outputPath": "/Users/thapcomdev/Downloads/Faculdade/Finlytics-Csharp/backend/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/thapcomdev/.nuget/NuGet/NuGet.Config"

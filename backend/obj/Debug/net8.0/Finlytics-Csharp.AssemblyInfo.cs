@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Finlytics-Csharp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f20d9d7a71d0c5b1da86b3f65b7ecb3c863072f9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+af26911fd7792470fe742cc1c85f2edcf1e83b6f")]
 [assembly: System.Reflection.AssemblyProductAttribute("Finlytics-Csharp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Finlytics-Csharp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
