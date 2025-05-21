@@ -4046,19 +4046,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/fernandopereira/.nuget/packages/": {}
+    "/Users/thapcomdev/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/fernandopereira/Desktop/CSHORP/new/Finlytics-Csharp/backend/Finlytics-Csharp.csproj",
+      "projectUniqueName": "/Users/thapcomdev/Downloads/Faculdade/Finlytics-Csharp/backend/Finlytics-Csharp.csproj",
       "projectName": "Finlytics-Csharp",
-      "projectPath": "/Users/fernandopereira/Desktop/CSHORP/new/Finlytics-Csharp/backend/Finlytics-Csharp.csproj",
-      "packagesPath": "/Users/fernandopereira/.nuget/packages/",
-      "outputPath": "/Users/fernandopereira/Desktop/CSHORP/new/Finlytics-Csharp/backend/obj/",
+      "projectPath": "/Users/thapcomdev/Downloads/Faculdade/Finlytics-Csharp/backend/Finlytics-Csharp.csproj",
+      "packagesPath": "/Users/thapcomdev/.nuget/packages/",
+      "outputPath": "/Users/thapcomdev/Downloads/Faculdade/Finlytics-Csharp/backend/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/fernandopereira/.nuget/NuGet/NuGet.Config"
+        "/Users/thapcomdev/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -4118,20 +4118,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[8.0.16, 8.0.16]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.osx-arm64",
-            "version": "[8.0.16, 8.0.16]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[8.0.16, 8.0.16]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"

@@ -14,9 +14,8 @@ const Dashboard = () => {
   useEffect(() => {
     const loadActions = async () => {
       try {
-        const ids = [1, 2, 3]; // trocar por lógica real de listagem quando disponível
-        const responses = await Promise.all(ids.map(id => api.get(`/${id}`)));
-        setActions(responses.map(r => r.data));
+        const response = await api.get("/");
+        setActions(response.data);
       } catch (err) {
         console.error("Erro ao carregar ações:", err);
       }
@@ -62,7 +61,6 @@ const Dashboard = () => {
             <Table striped bordered hover className="align-middle text-center">
               <thead>
                 <tr>
-                  <th>ID</th>
                   <th>Empresa</th>
                   <th>Ticker</th>
                   <th>Data da Compra</th>
@@ -81,7 +79,6 @@ const Dashboard = () => {
               <tbody>
                 {actions.map((action) => (
                   <tr key={action.id}>
-                    <td>{action.id}</td>
                     <td>{action.companyName}</td>
                     <td>{action.ticker}</td>
                     <td>{new Date(action.purchaseDate).toLocaleDateString()}</td>

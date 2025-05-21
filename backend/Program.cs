@@ -17,7 +17,7 @@ builder.Services.AddCors(options =>
 builder.Services.AddControllers();
 
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseMySql("server=localhost;database=FinlyticsDb;user=root;password=SUA_SENHA",
+    options.UseMySql("server=localhost;database=FinlyticsDb;user=root;password=rootroot",
         new MySqlServerVersion(new Version(8, 0, 36))));
 
 var app = builder.Build();
