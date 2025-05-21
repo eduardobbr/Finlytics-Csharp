@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 using Finlytics_Csharp.Models;
 using Finlytics_Csharp.Data;
+using Microsoft.EntityFrameworkCore;
+
 
 
 [ApiController]
@@ -27,6 +29,15 @@ public class StockActionsController : ControllerBase
 
         return CreatedAtAction(nameof(GetStockActionById), new { id = action.Id }, action);
     }
+
+    // GET: api/StockActions
+    [HttpGet]
+    public async Task<ActionResult<IEnumerable<StockAction>>> GetAllStockActions()
+    {
+        var actions = await _context.StockActions.ToListAsync();
+        return Ok(actions);
+    }
+
 
     // GET: api/StockActions/{id}
     [HttpGet("{id}")]

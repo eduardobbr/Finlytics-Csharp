@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/thapcomdev/Downloads/Faculdade/Finlytics-Csharp/backend/Finlytics-Csharp.csproj": {}
+    "/Users/fernandopereira/Desktop/CSHORP/new/Finlytics-Csharp/backend/Finlytics-Csharp.csproj": {}
   },
   "projects": {
-    "/Users/thapcomdev/Downloads/Faculdade/Finlytics-Csharp/backend/Finlytics-Csharp.csproj": {
+    "/Users/fernandopereira/Desktop/CSHORP/new/Finlytics-Csharp/backend/Finlytics-Csharp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/thapcomdev/Downloads/Faculdade/Finlytics-Csharp/backend/Finlytics-Csharp.csproj",
+        "projectUniqueName": "/Users/fernandopereira/Desktop/CSHORP/new/Finlytics-Csharp/backend/Finlytics-Csharp.csproj",
         "projectName": "Finlytics-Csharp",
-        "projectPath": "/Users/thapcomdev/Downloads/Faculdade/Finlytics-Csharp/backend/Finlytics-Csharp.csproj",
-        "packagesPath": "/Users/thapcomdev/.nuget/packages/",
-        "outputPath": "/Users/thapcomdev/Downloads/Faculdade/Finlytics-Csharp/backend/obj/",
+        "projectPath": "/Users/fernandopereira/Desktop/CSHORP/new/Finlytics-Csharp/backend/Finlytics-Csharp.csproj",
+        "packagesPath": "/Users/fernandopereira/.nuget/packages/",
+        "outputPath": "/Users/fernandopereira/Desktop/CSHORP/new/Finlytics-Csharp/backend/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/thapcomdev/.nuget/NuGet/NuGet.Config"
+          "/Users/fernandopereira/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -48,6 +48,12 @@
               "target": "Package",
               "version": "[8.0.13, )"
             },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.13, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[8.0.13, )"
@@ -68,6 +74,20 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.16, 8.0.16]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.osx-arm64",
+              "version": "[8.0.16, 8.0.16]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.16, 8.0.16]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
