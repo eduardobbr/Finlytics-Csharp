@@ -11,9 +11,10 @@ namespace Finlytics_Csharp.Models
         public decimal CurrentPrice { get; set; }
         public decimal PurchaseFee { get; set; }
         public int Quantity { get; set; }
-        public string ProbabilityArrow { get; set; } // e.g., "Up", "Down"
-        public decimal Upside { get; set; } // %
-        public decimal Downside { get; set; } // %
-        public int Quality { get; set; } // 0–100 or rating system
+        public string ProbabilityArrow { get; set; }
+        public decimal Upside { get; set; }
+        public decimal Downside { get; set; }
+        public int Quality { get; set; }
+        public DateTime? DateDeleted { get; set; }
     }
 }
