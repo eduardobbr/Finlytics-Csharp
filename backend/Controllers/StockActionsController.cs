@@ -117,5 +117,21 @@ namespace Finlytics_Csharp.Controllers
             return Ok(deletedActions);
         }
 
+        // DELETE definitivo: api/StockActions/hard/{id}
+        [HttpDelete("hard/{id}")]
+        public async Task<IActionResult> HardDeleteStockAction(int id)
+        {
+            var action = await _context.StockActions.IgnoreQueryFilters()
+                .FirstOrDefaultAsync(a => a.Id == id);
+
+            if (action == null)
+                return NotFound();
+
+            _context.StockActions.Remove(action);
+            await _context.SaveChangesAsync();
+
+            return NoContent();
+        }
+
     }
 }

@@ -68,7 +68,7 @@ namespace Finlytics_Csharp.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("StockActions");
+                    b.ToTable("StockActions", (string)null);
                 });
 #pragma warning restore 612, 618
         }

@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";  // Importar o hook de navegação
 import { api } from "../services/api";
+import { FaEdit, FaTrashAlt } from "react-icons/fa";  // Importando os ícones do react-icons
 import {
   Table,
   Button,
@@ -10,6 +12,7 @@ import {
 
 const Dashboard = () => {
   const [actions, setActions] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const loadActions = async () => {
@@ -35,26 +38,28 @@ const Dashboard = () => {
     }
   };
 
+  const handleEdit = (id) => {
+    navigate(`/editar-acao/${id}`);
+  };
+
+  const calcularLucro = (action) => {
+    const lucro = (action.currentPrice - action.purchasePrice) * action.quantity - action.purchaseFee;
+    return lucro.toFixed(2);
+  };
+
   return (
     <>
-      {/* Header fixo */}
       <Navbar bg="dark" variant="dark" expand="lg">
         <Container>
           <Navbar.Brand>📈 Finlytics</Navbar.Brand>
           <Nav className="ms-auto">
-            <Button variant="success" href="/nova-acao">
-              ➕ Nova Ação
-            </Button>
+            <Button variant="success" href="/nova-acao">➕ Nova Ação</Button>
+            <Button variant="warning" href="/historico" className="ms-2">🗑️ Histórico</Button>
           </Nav>
         </Container>
       </Navbar>
 
-      {/* Conteúdo centralizado com fundo claro */}
-      <Container
-        fluid
-        className="d-flex justify-content-center py-5"
-        style={{ minHeight: "100vh", backgroundColor: "#f8f9fa" }}
-      >
+      <Container fluid className="d-flex justify-content-center py-5" style={{ minHeight: "100vh", backgroundColor: "#f8f9fa" }}>
         <div style={{ width: "100%", maxWidth: "1200px" }}>
           <h2 className="text-center mb-4">📊 Dashboard de Ações</h2>
           <div className="table-responsive">
@@ -73,6 +78,7 @@ const Dashboard = () => {
                   <th>Upside (%)</th>
                   <th>Downside (%)</th>
                   <th>Qualidade</th>
+                  <th><strong>Lucro / Prejuízo (R$)</strong></th> {/* Nova coluna */}
                   <th>Ações</th>
                 </tr>
               </thead>
@@ -92,15 +98,22 @@ const Dashboard = () => {
                     <td>{action.downside}%</td>
                     <td>{action.quality}</td>
                     <td>
-                      <Button variant="warning" size="sm" className="me-2" disabled>
-                        Editar
+                      {(() => {
+                        const lucro = calcularLucro(action);
+                        const valor = parseFloat(lucro);
+                        return (
+                          <span style={{ color: valor >= 0 ? "green" : "red" }}>
+                            R${lucro}
+                          </span>
+                        );
+                      })()}
+                    </td>
+                    <td>
+                      <Button variant="outline-primary" size="sm" className="me-2" onClick={() => handleEdit(action.id)}>
+                        <FaEdit />
                       </Button>
-                      <Button
-                        variant="danger"
-                        size="sm"
-                        onClick={() => deleteAction(action.id)}
-                      >
-                        Excluir
+                      <Button variant="outline-danger" size="sm" className="ms-2" onClick={() => deleteAction(action.id)}>
+                        <FaTrashAlt />
                       </Button>
                     </td>
                   </tr>
