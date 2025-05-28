@@ -105,5 +105,17 @@ namespace Finlytics_Csharp.Controllers
 
             return NoContent();
         }
+
+        // GET: api/StockActions/deleted
+        [HttpGet("deleted")]
+        public async Task<ActionResult<IEnumerable<StockAction>>> GetDeletedStockActions()
+        {
+            var deletedActions = await _context.StockActions
+                .Where(a => a.DateDeleted != null)
+                .ToListAsync();
+
+            return Ok(deletedActions);
+        }
+
     }
 }
