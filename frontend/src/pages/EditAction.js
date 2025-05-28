@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";  // Adicione isso
+import { Link } from "react-router-dom";  
 
 import { api } from "../services/api";
 import { useNavigate, useParams } from "react-router-dom";
@@ -16,7 +16,7 @@ import {
 } from "react-bootstrap";
 
 const EditAction = () => {
-  const { id } = useParams(); // Pega o ID da URL
+  const { id } = useParams(); 
   const navigate = useNavigate();
   const [form, setForm] = useState({
     ticker: "",
@@ -35,7 +35,7 @@ const EditAction = () => {
   const [erro, setErro] = useState(null);
   const [sucesso, setSucesso] = useState(false);
 
-  // Carregar os dados da ação para edição
+  
   useEffect(() => {
     const loadAction = async () => {
       try {

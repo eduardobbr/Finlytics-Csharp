@@ -14,8 +14,8 @@ builder.Services.AddCors(options =>
 });
 
 builder.Services.AddControllers();
-builder.Services.AddEndpointsApiExplorer(); // <-- Swagger Service
-builder.Services.AddSwaggerGen();          // <-- Swagger Generator
+builder.Services.AddEndpointsApiExplorer(); 
+builder.Services.AddSwaggerGen();          
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseMySql("server=localhost;database=FinlyticsDb;user=root;password=rootroot",
@@ -25,8 +25,8 @@ var app = builder.Build();
 
 app.UseCors("AllowAll");
 
-app.UseSwagger();    // <-- Middleware Swagger
-app.UseSwaggerUI();  // <-- Interface Swagger
+app.UseSwagger();   
+app.UseSwaggerUI();
 
 app.UseAuthorization();
 app.MapControllers();
