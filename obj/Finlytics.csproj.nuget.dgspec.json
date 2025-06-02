@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\eduar\\Desktop\\finlytics\\Finlytics\\Finlytics.csproj": {}
+    "/Users/fernandopereira/Desktop/projeto/Finlytics-Csharp/Finlytics.csproj": {}
   },
   "projects": {
-    "C:\\Users\\eduar\\Desktop\\finlytics\\Finlytics\\Finlytics.csproj": {
+    "/Users/fernandopereira/Desktop/projeto/Finlytics-Csharp/Finlytics.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\eduar\\Desktop\\finlytics\\Finlytics\\Finlytics.csproj",
+        "projectUniqueName": "/Users/fernandopereira/Desktop/projeto/Finlytics-Csharp/Finlytics.csproj",
         "projectName": "Finlytics",
-        "projectPath": "C:\\Users\\eduar\\Desktop\\finlytics\\Finlytics\\Finlytics.csproj",
-        "packagesPath": "C:\\Users\\eduar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\eduar\\Desktop\\finlytics\\Finlytics\\obj\\",
+        "projectPath": "/Users/fernandopereira/Desktop/projeto/Finlytics-Csharp/Finlytics.csproj",
+        "packagesPath": "/Users/fernandopereira/.nuget/packages/",
+        "outputPath": "/Users/fernandopereira/Desktop/projeto/Finlytics-Csharp/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\eduar\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/fernandopereira/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -38,7 +38,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net9.0": {
@@ -72,7 +72,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
